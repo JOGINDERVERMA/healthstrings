@@ -19,51 +19,6 @@ const GALLERY_ITEMS = [
     category: 'Sports Rehab & Conditioning',
     badgeColor: '#0f766e',
     badgeBg: '#f0fdf4'
-  },
-  {
-    id: 'alumni-award',
-    image: '/gallery/gallery_award.png',
-    title: 'Our Proud Alumni Excellence Recognition',
-    subtitle: 'Honored at REKINDLE 2025 by Jaipur Hospital College of Physiotherapy for outstanding clinical contributions to orthopedic & sports care.',
-    category: 'Clinical Excellence Award',
-    badgeColor: '#c2410c',
-    badgeBg: '#fff7ed'
-  },
-  {
-    id: 'clinic-suite-1',
-    image: '/gallery/gallery_clinic_1.jpg',
-    title: 'Advanced Physiotherapy & Spine Consultation Suite',
-    subtitle: 'Dedicated clinical assessment rooms equipped with modern diagnostics opposite SMS Hospital, C-Scheme Jaipur.',
-    category: 'Consultation Suite',
-    badgeColor: '#0d9488',
-    badgeBg: '#f0fdf4'
-  },
-  {
-    id: 'clinic-suite-2',
-    image: '/gallery/gallery_clinic_3.jpg',
-    title: 'Specialized Orthopedic & Joint Rehabilitation Bay',
-    subtitle: 'Targeted functional therapy and post-surgical recovery zone for optimal patient mobility and pain relief.',
-    category: 'Rehabilitation Bay',
-    badgeColor: '#4338ca',
-    badgeBg: '#eef2ff'
-  },
-  {
-    id: 'clinic-svg-1',
-    image: '/clinic-gallery-1.svg',
-    title: 'Clinical Physiotherapy Treatment & Modalities Bay',
-    subtitle: 'Ergonomically designed treatment stations for electrotherapy, laser treatment, and hands-on manual physical therapy.',
-    category: 'Treatment Modalities',
-    badgeColor: '#0284c7',
-    badgeBg: '#e0f2fe'
-  },
-  {
-    id: 'clinic-svg-2',
-    image: '/clinic-gallery-2.svg',
-    title: 'Integrated Rehabilitation & Clinical Nutrition Suite',
-    subtitle: 'Holistic wellness assessment area combining physical rehabilitation with specialized metabolic and PCOS dietary care.',
-    category: 'Nutrition & Rehab Suite',
-    badgeColor: '#7c3aed',
-    badgeBg: '#f3e8ff'
   }
 ];
 
