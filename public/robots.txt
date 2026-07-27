@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://healthstrings.in/sitemap.xml
