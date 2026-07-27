@@ -804,6 +804,47 @@ button {
   margin-bottom: 44px;
 }
 
+.btn-hero-primary {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  color: #ffffff;
+  padding: 16px 34px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 1.06rem;
+  border: 1px solid rgba(153, 246, 228, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(13, 148, 136, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-hero-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(13, 148, 136, 0.5);
+}
+
+.btn-hero-call {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  padding: 16px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1.02rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-hero-call:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
 .hero-slide-tabs {
   display: flex;
   justify-content: center;
