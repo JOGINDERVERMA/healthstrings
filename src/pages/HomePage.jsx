@@ -443,13 +443,11 @@ export default function HomePage({ setActivePage, setSelectedServiceId }) {
                     <span className="hero-doctor-name">
                       Dr. Meenakshi Kanwar Sisodia, PT
                     </span>
-                    <span className="hero-doctor-tag">
-                      CHIEF SPECIALIST
-                    </span>
                   </div>
-                  <div className="hero-doctor-credentials">
-                    <Award size={14} /> Sports Physiotherapist | Nutritionist
-                    <Award size={14} /> BPT, CKT • World Rugby Level 1 Medic • Founder
+                  <div className="hero-doctor-credentials d-inline">
+                   <p> Sports Physiotherapist | Nutritionist</p>
+                   <p> BPT, CKT • World Rugby Level 1 Medic</p>
+                   <p> Khelo India Team Physio, Athletics Pre Level 1 Coach, <br></br>Certified Technical Official (AFI)</p>
                   </div>
                 </div>
               </div>
