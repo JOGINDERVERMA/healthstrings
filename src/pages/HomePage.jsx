@@ -448,7 +448,8 @@ export default function HomePage({ setActivePage, setSelectedServiceId }) {
                     </span>
                   </div>
                   <div className="hero-doctor-credentials">
-                    <Award size={14} /> BPT, MPT (Ortho &amp; Sports) • World Rugby Educator • Founder
+                    <Award size={14} /> Sports Physiotherapist | Nutritionist
+                    <Award size={14} /> BPT, CKT • World Rugby Level 1 Medic • Founder
                   </div>
                 </div>
               </div>
