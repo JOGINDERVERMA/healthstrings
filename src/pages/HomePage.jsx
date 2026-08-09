@@ -780,7 +780,10 @@ export default function HomePage({ setActivePage, setSelectedServiceId }) {
                 Dr. Meenakshi Kanwar Sisodia
               </h2>
               <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#2dd4bf', marginBottom: '22px' }}>
-                Clinical Nutritionist | Physiotherapy &amp; Recovery Expert
+                Sports Physiotherapist | Nutritionist
+                <span className='d-flex'> BPT, CKT • World Rugby Level 1 Medic </span>
+               <span className='d-flex'> Certified Technical Official (AFI)</span>
+                 <span className='d-flex'>Athletics Pre Level 1 Coach, Khelo India Team Physio, </span>
               </div>
 
               <p style={{ fontSize: '1.05rem', color: '#cbd5e1', lineHeight: 1.8, marginBottom: '26px' }}>

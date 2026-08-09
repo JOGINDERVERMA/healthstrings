@@ -91,12 +91,6 @@ export default function Footer({ setActivePage, onOpenStudioModal }) {
           <div>
             © {new Date().getFullYear()} Healthstrings Physiotherapy & Sports Rehab Clinic, C Scheme, Jaipur. All rights reserved.
           </div>
-          <div style={{ display: 'flex', gap: '20px' }}>
-            <span>SEO Keywords: Jaipur, C Scheme, Raja Park, Bapu Nagar, SMS Hospital</span>
-            <span onClick={() => setActivePage('contact')} style={{ cursor: 'pointer', color: '#2dd4bf' }}>
-              Book Consultation
-            </span>
-          </div>
         </div>
       </div>
     </footer>
