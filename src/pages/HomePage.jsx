@@ -27,8 +27,8 @@ const HERO_SLIDES = [
     id: 1,
     image: '/hero_slide_1.jpg',
     tag: 'PHYSIOTHERAPY & CLINICAL NUTRITION • JAIPUR',
-    titleMain: 'Heal Better. Move Better.',
-    titleAccent: 'Live Better.'
+    titleMain: 'Expert Physiotherapy & Sports Rehabilitation ',
+    titleAccent: 'in Jaipur'
   },
   {
     id: 2,
