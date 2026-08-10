@@ -1270,6 +1270,19 @@ export default function HomePage({ setActivePage, setSelectedServiceId }) {
               </div>
             </div>
           </div>
+
+          {/* Google Maps Embed */}
+          <div style={{ marginTop: '30px', borderRadius: '24px', overflow: 'hidden', border: '1px solid #cbd5e1', boxShadow: '0 10px 28px rgba(15,23,42,0.05)', maxWidth: '1040px', margin: '30px auto 0' }}>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.956288907462!2d75.80964158955474!3d26.904882316450482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db70a2c6885cb%3A0x9ecc114cff32ae9f!2sHealthstrings%20Physiotherapy%20%26%20Sports%20Rehab%20Clinic!5e0!3m2!1sen!2sin!4v1786380387494!5m2!1sen!2sin" 
+              width="100%" 
+              height="450" 
+              style={{ border: 0, display: 'block' }} 
+              allowFullScreen="" 
+              loading="lazy" 
+              referrerPolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
         </div>
       </section>
 
