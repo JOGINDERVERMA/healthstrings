@@ -580,7 +580,7 @@ export default function HomePage({ setActivePage, setSelectedServiceId }) {
                     alignItems: 'center',
                     gap: '8px',
                     backgroundColor: '#0f172a',
-                    color: pillar.badgeColor,
+                    color: pillar.bgTint,
                     padding: '6px 14px',
                     borderRadius: '999px',
                     fontSize: '0.8rem',

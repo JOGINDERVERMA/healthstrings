@@ -2006,8 +2006,11 @@ img, svg, video, iframe, canvas {
     border-radius: 26px !important;
     gap: 12px !important;
     text-align: center !important;
-    width: 70% !important;
+    width: 100% !important;
     margin-bottom: 22px !important;
+  }
+  .hero-pillar-badges{
+    justify-content: center;
   }
   .hero-doctor-avatar {
     width: 86px !important;
