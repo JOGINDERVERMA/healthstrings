@@ -967,7 +967,7 @@ export default function HomePage({ setActivePage, setSelectedServiceId }) {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '26px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: '26px' }}>
             {GALLERY_ITEMS.map((item) => (
               <div
                 key={item.id}
