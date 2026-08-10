@@ -92,7 +92,7 @@ export default function Footer({ setActivePage, onOpenStudioModal }) {
             © {new Date().getFullYear()} Healthstrings Physiotherapy & Sports Rehab Clinic, C Scheme, Jaipur. All rights reserved.
           </div>
           <div style={{ marginTop: '4px' }}>
-            Powered by <a href="https://lkntecno.com" target="_blank" rel="noopener noreferrer" style={{ color: '#2dd4bf', textDecoration: 'none', fontWeight: 600 }}>Lkn Technologies</a>
+            Maintained by <a href="https://lkntecno.com" target="_blank" rel="noopener noreferrer" style={{ color: '#2dd4bf', textDecoration: 'none', fontWeight: 600 }}>Lkn Technologies</a>
           </div>
         </div>
       </div>
