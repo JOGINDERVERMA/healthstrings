@@ -7,13 +7,14 @@ import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import ContactPage from './pages/ContactPage';
+import BackAndNeckPainPage from './pages/BackAndNeckPainPage';
 import { MessageCircle, Phone, ArrowUp } from 'lucide-react';
 import { CLINIC_INFO } from './data/clinicData';
 
 export default function App() {
   const [activePage, setActivePageState] = useState(() => {
     const path = window.location.pathname.replace(/^\/+/, '') || window.location.hash.replace(/^[/#]+/, '') || 'home';
-    const validPages = ['home', 'about', 'services', 'service-detail', 'contact'];
+    const validPages = ['home', 'about', 'services', 'service-detail', 'contact', 'back-and-neck-pain-treatment'];
     return validPages.includes(path) ? path : 'home';
   });
   const [selectedServiceId, setSelectedServiceId] = useState('orthopedic');
@@ -38,7 +39,7 @@ export default function App() {
         setActivePageState(event.state.page);
       } else {
         const path = window.location.pathname.replace(/^\/+/, '') || window.location.hash.replace(/^[/#]+/, '') || 'home';
-        const validPages = ['home', 'about', 'services', 'service-detail', 'contact'];
+        const validPages = ['home', 'about', 'services', 'service-detail', 'contact', 'back-and-neck-pain-treatment'];
         setActivePageState(validPages.includes(path) ? path : 'home');
       }
     };
@@ -55,7 +56,8 @@ export default function App() {
       about: "About Our Jaipur Physiotherapy Doctors | Opposite SMS Hospital | Healthstrings Clinic",
       services: "All Physiotherapy & Rehab Treatments in Jaipur | Healthstrings Clinical Directory",
       "service-detail": "Detailed Clinical Physiotherapy Protocol | Jaipur Specialist Care | Healthstrings",
-      contact: "Book Physiotherapy Appointment Jaipur | Opposite SMS Hospital C Scheme | Healthstrings"
+      contact: "Book Physiotherapy Appointment Jaipur | Opposite SMS Hospital C Scheme | Healthstrings",
+      "back-and-neck-pain-treatment": "Best Back & Neck Pain Treatment in Jaipur | Healthstrings Clinic"
     };
 
     document.title = seoTitles[activePage] || seoTitles.home;
@@ -120,6 +122,13 @@ export default function App() {
 
         {activePage === 'contact' && (
           <ContactPage 
+            onOpenStudioModal={() => setStudioModalOpen(true)}
+          />
+        )}
+
+        {activePage === 'back-and-neck-pain-treatment' && (
+          <BackAndNeckPainPage 
+            setActivePage={setActivePage}
             onOpenStudioModal={() => setStudioModalOpen(true)}
           />
         )}

@@ -59,7 +59,14 @@ export default function Footer({ setActivePage, onOpenStudioModal }) {
           <div>
             <h4 style={{ color: 'white', fontSize: '1.05rem', marginBottom: '18px' }}>Clinical Specialties</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '0.92rem', color: '#cbd5e1' }}>
-              <li>• Back & Neck Pain Treatment</li>
+              <li 
+                onClick={() => { setActivePage('back-and-neck-pain-treatment'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} 
+                style={{ cursor: 'pointer', transition: 'color 0.2s' }}
+                onMouseEnter={(e) => e.target.style.color = '#2dd4bf'}
+                onMouseLeave={(e) => e.target.style.color = '#cbd5e1'}
+              >
+                • Back & Neck Pain Treatment
+              </li>
               <li>• Knee & Shoulder Rehabilitation</li>
               <li>• Disc Herniation & Sciatica Care</li>
               <li>• Clinical Nutrition & Diet Plans</li>

@@ -69,7 +69,11 @@ export default function Header({ activePage, setActivePage, setSelectedServiceId
     if (setSelectedServiceId) {
       setSelectedServiceId(serviceId);
     }
-    setActivePage('service-detail');
+    if (serviceId === 'orthopedic') {
+      setActivePage('back-and-neck-pain-treatment');
+    } else {
+      setActivePage('service-detail');
+    }
     setServicesDropdownOpen(false);
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });

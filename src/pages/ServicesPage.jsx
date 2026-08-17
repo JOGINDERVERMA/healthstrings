@@ -10,7 +10,11 @@ export default function ServicesPage({ setSelectedServiceId, setActivePage, onOp
     if (setSelectedServiceId) {
       setSelectedServiceId(id);
     }
-    setActivePage('service-detail');
+    if (id === 'orthopedic') {
+      setActivePage('back-and-neck-pain-treatment');
+    } else {
+      setActivePage('service-detail');
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
