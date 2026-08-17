@@ -6,6 +6,12 @@ import {
   UserCheck, Layers, HelpCircle
 } from 'lucide-react';
 import { CORE_SERVICES, CLINIC_INFO, TESTIMONIALS } from '../data/clinicData';
+import { EXACT_CONDITIONS_LIST, EXACT_TREATMENT_PROCESS } from '../data/clinicData';
+import GallerySection from '../components/GallerySection';
+import BlogSection from '../components/BlogSection';
+import FAQSection from '../components/FAQSection';
+import CTASection from '../components/CTASection';
+import ContactSection from '../components/ContactSection';
 
 export default function ServiceDetailPage({ serviceId, setActivePage, onOpenStudioModal }) {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -759,7 +765,11 @@ export default function ServiceDetailPage({ serviceId, setActivePage, onOpenStud
           </div>
         </div>
       </section>
-
+      <GallerySection />
+      <BlogSection />
+      <FAQSection />
+      <CTASection setActivePage={setActivePage} />
+      <ContactSection />
     </div>
   );
 }

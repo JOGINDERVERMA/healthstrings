@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
 import { ArrowRight, ShieldCheck, Activity, MapPin, Phone, MessageCircle, AlertCircle } from 'lucide-react';
 import { CLINIC_INFO } from '../data/clinicData';
-
+import GallerySection from '../components/GallerySection';
+import BlogSection from '../components/BlogSection';
+import FAQSection from '../components/FAQSection';
+import CTASection from '../components/CTASection';
+import ContactSection from '../components/ContactSection';
 export default function PostureCorrectionPage({ setActivePage }) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -90,6 +94,12 @@ export default function PostureCorrectionPage({ setActivePage }) {
           </div>
         </div>
       </section>
+
+      <GallerySection />
+      <BlogSection />
+      <FAQSection />
+      <CTASection setActivePage={setActivePage} />
+      <ContactSection />
     </div>
   );
 }
