@@ -69,11 +69,23 @@ export default function Header({ activePage, setActivePage, setSelectedServiceId
     if (setSelectedServiceId) {
       setSelectedServiceId(serviceId);
     }
-    if (serviceId === 'orthopedic') {
-      setActivePage('back-and-neck-pain-treatment');
+    
+    const dedicatedRoutes = {
+      'orthopedic': 'back-and-neck-pain-treatment',
+      'knee-shoulder': 'knee-shoulder',
+      'disc-sciatica': 'disc-sciatica',
+      'sports-injury': 'sports-injury',
+      'post-surgery': 'post-surgery',
+      'posture-correction': 'posture-correction',
+      'chronic-pain': 'chronic-pain'
+    };
+
+    if (dedicatedRoutes[serviceId]) {
+      setActivePage(dedicatedRoutes[serviceId]);
     } else {
       setActivePage('service-detail');
     }
+    
     setServicesDropdownOpen(false);
     setMobileMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });

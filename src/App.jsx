@@ -8,13 +8,19 @@ import ServicesPage from './pages/ServicesPage';
 import ServiceDetailPage from './pages/ServiceDetailPage';
 import ContactPage from './pages/ContactPage';
 import BackAndNeckPainPage from './pages/BackAndNeckPainPage';
+import KneeShoulderPage from './pages/KneeShoulderPage';
+import DiscSciaticaPage from './pages/DiscSciaticaPage';
+import SportsInjuryPage from './pages/SportsInjuryPage';
+import PostSurgeryPage from './pages/PostSurgeryPage';
+import PostureCorrectionPage from './pages/PostureCorrectionPage';
+import ChronicPainPage from './pages/ChronicPainPage';
 import { MessageCircle, Phone, ArrowUp } from 'lucide-react';
 import { CLINIC_INFO } from './data/clinicData';
 
 export default function App() {
   const [activePage, setActivePageState] = useState(() => {
     const path = window.location.pathname.replace(/^\/+/, '') || window.location.hash.replace(/^[/#]+/, '') || 'home';
-    const validPages = ['home', 'about', 'services', 'service-detail', 'contact', 'back-and-neck-pain-treatment'];
+    const validPages = ['home', 'about', 'services', 'service-detail', 'contact', 'back-and-neck-pain-treatment', 'knee-shoulder', 'disc-sciatica', 'sports-injury', 'post-surgery', 'posture-correction', 'chronic-pain'];
     return validPages.includes(path) ? path : 'home';
   });
   const [selectedServiceId, setSelectedServiceId] = useState('orthopedic');
@@ -39,7 +45,7 @@ export default function App() {
         setActivePageState(event.state.page);
       } else {
         const path = window.location.pathname.replace(/^\/+/, '') || window.location.hash.replace(/^[/#]+/, '') || 'home';
-        const validPages = ['home', 'about', 'services', 'service-detail', 'contact', 'back-and-neck-pain-treatment'];
+        const validPages = ['home', 'about', 'services', 'service-detail', 'contact', 'back-and-neck-pain-treatment', 'knee-shoulder', 'disc-sciatica', 'sports-injury', 'post-surgery', 'posture-correction', 'chronic-pain'];
         setActivePageState(validPages.includes(path) ? path : 'home');
       }
     };
@@ -57,7 +63,13 @@ export default function App() {
       services: "All Physiotherapy & Rehab Treatments in Jaipur | Healthstrings Clinical Directory",
       "service-detail": "Detailed Clinical Physiotherapy Protocol | Jaipur Specialist Care | Healthstrings",
       contact: "Book Physiotherapy Appointment Jaipur | Opposite SMS Hospital C Scheme | Healthstrings",
-      "back-and-neck-pain-treatment": "Best Back & Neck Pain Treatment in Jaipur | Healthstrings Clinic"
+      "back-and-neck-pain-treatment": "Best Back & Neck Pain Treatment in Jaipur | Healthstrings Clinic",
+      "knee-shoulder": "Best Knee & Shoulder Pain Treatment in Jaipur | Healthstrings",
+      "disc-sciatica": "Sciatica & Slipped Disc Treatment Jaipur | Healthstrings Clinic",
+      "sports-injury": "Sports Injury & Rehab Clinic Jaipur | Healthstrings",
+      "post-surgery": "Post-Surgery Rehabilitation in Jaipur | Healthstrings Clinic",
+      "posture-correction": "Posture Correction & Ergonomics Jaipur | Healthstrings Clinic",
+      "chronic-pain": "Chronic Pain Management & Arthritis Treatment Jaipur | Healthstrings"
     };
 
     document.title = seoTitles[activePage] || seoTitles.home;
@@ -127,10 +139,31 @@ export default function App() {
         )}
 
         {activePage === 'back-and-neck-pain-treatment' && (
-          <BackAndNeckPainPage 
-            setActivePage={setActivePage}
-            onOpenStudioModal={() => setStudioModalOpen(true)}
-          />
+          <BackAndNeckPainPage setActivePage={setActivePage} />
+        )}
+
+        {activePage === 'knee-shoulder' && (
+          <KneeShoulderPage setActivePage={setActivePage} />
+        )}
+
+        {activePage === 'disc-sciatica' && (
+          <DiscSciaticaPage setActivePage={setActivePage} />
+        )}
+
+        {activePage === 'sports-injury' && (
+          <SportsInjuryPage setActivePage={setActivePage} />
+        )}
+
+        {activePage === 'post-surgery' && (
+          <PostSurgeryPage setActivePage={setActivePage} />
+        )}
+
+        {activePage === 'posture-correction' && (
+          <PostureCorrectionPage setActivePage={setActivePage} />
+        )}
+
+        {activePage === 'chronic-pain' && (
+          <ChronicPainPage setActivePage={setActivePage} />
         )}
       </main>
 
