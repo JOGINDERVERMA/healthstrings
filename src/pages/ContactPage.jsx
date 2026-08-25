@@ -395,7 +395,7 @@ export default function ContactPage({ onOpenStudioModal }) {
                           }}
                         >
                           <option value="Physiotherapy Services">Physiotherapy Services</option>
-                          <option value="Clinical Nutrition & Lifestyle Care">Clinical Nutrition &amp; Lifestyle Care</option>
+                          <option value="Nutrition & Lifestyle Care">Nutrition &amp; Lifestyle Care</option>
                           <option value="Strength & Conditioning">Strength &amp; Conditioning</option>
                         </select>
                       </div>
@@ -779,7 +779,7 @@ export default function ContactPage({ onOpenStudioModal }) {
               Your Partner in Better Health
             </h2>
             <p style={{ fontSize: '1.02rem', color: '#475569', lineHeight: 1.7 }}>
-              HealthStrings Clinic provides trusted physiotherapy, clinical nutrition, rehabilitation, and wellness solutions to help you recover naturally, move confidently, and live a healthier life.
+              HealthStrings Clinic provides trusted physiotherapy, nutrition, rehabilitation, and wellness solutions to help you recover naturally, move confidently, and live a healthier life.
             </p>
           </div>
         </div>

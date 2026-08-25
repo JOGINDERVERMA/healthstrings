@@ -20,7 +20,7 @@ export default function Footer({ setActivePage, onOpenStudioModal }) {
               Healing Beyond Symptoms. Building Health for Life.
             </div>
             <p style={{ fontSize: '0.92rem', lineHeight: '1.7', color: '#94a3b8', marginBottom: '20px' }}>
-              HealthStrings Clinic is committed to delivering trusted physiotherapy, clinical nutrition, rehabilitation, and wellness solutions through personalized care, evidence-based treatments, and a patient-first approach to help you move better, live healthier, and achieve long-term well-being.
+              HealthStrings Clinic is committed to delivering trusted physiotherapy, nutrition, rehabilitation, and wellness solutions through personalized care, evidence-based treatments, and a patient-first approach to help you move better, live healthier, and achieve long-term well-being.
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#cbd5e1', fontSize: '0.85rem' }}>
               <ShieldCheck size={18} color="#2dd4bf" />

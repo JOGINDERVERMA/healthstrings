@@ -4,7 +4,7 @@
 
 export const CLINIC_INFO = {
   name: "HealthStrings Clinic",
-  tagline: "Advanced Physiotherapy Care, Clinical Nutrition & Sports Conditioning in Jaipur",
+  tagline: "Advanced Physiotherapy Care, Nutrition & Sports Conditioning in Jaipur",
   phone: "+91 92510 59302",
   phoneDisplay: "+91 92510 59302",
   whatsappUrl: "https://wa.me/919251059302?text=Hello%20Healthstrings%20Jaipur%20Clinic,%20I%20would%20like%20to%20book%20a%20consultation.",
@@ -174,7 +174,7 @@ export const CORE_SERVICES = [
     seoKeywords: "Sciatica Physiotherapist Jaipur, Slipped Disc Clinic C Scheme, Non Surgical Disc Treatment Opposite SMS Hospital"
   },
   {
-    id: "sports-rehab",
+    id: "sports-injury",
     title: "Sports Injury & Athletic Rehabilitation",
     category: "Physiotherapy & Conditioning",
     shortDesc: "Targeted sports therapy for ACL tears, rotator cuff strains, tennis elbow, ankle sprains, and marathon return-to-play protocol.",
@@ -214,7 +214,7 @@ export const CORE_SERVICES = [
     seoKeywords: "Knee Replacement Rehab Jaipur, Post Surgery Physiotherapy C Scheme, Orthopedic Rehab Near SMS Hospital"
   },
   {
-    id: "posture-mobility",
+    id: "posture-correction",
     title: "Posture Correction & Mobility Training",
     category: "Physiotherapy Department",
     shortDesc: "Dedicated correction for tech-neck, rounded shoulders, scoliosis management, and ergonomic desk-worker rehabilitation.",
@@ -257,8 +257,8 @@ export const CORE_SERVICES = [
     id: "part-nutrition",
     title: "Personalized Nutrition & Lifestyle Management",
     category: "Part 02 • Nutrition Pillar",
-    shortDesc: "Customized clinical nutrition plans designed to improve health, balance hormones, and support your medical and fitness goals.",
-    fullDescription: "At Healthstrings Clinic, we believe food is the foundation of healing. Our Clinical Nutrition Department tailors every diet plan to Indian home kitchens, ensuring delicious, sustainable hormonal and metabolic balance.",
+    shortDesc: "Customized nutrition plans designed to improve health, balance hormones, and support your medical and fitness goals.",
+    fullDescription: "At Healthstrings Clinic, we believe food is the foundation of healing. Our Nutrition Department tailors every diet plan to Indian home kitchens, ensuring delicious, sustainable hormonal and metabolic balance.",
     symptoms: [
       "Unexplained weight gain or resistance to fat loss",
       "Hormonal irregularities, PCOS/PCOD, or mood fluctuations",
@@ -271,14 +271,14 @@ export const CORE_SERVICES = [
       { step: "03", name: "Anti-Inflammatory Joint Support", desc: "Targeting foods that naturally reduce joint swelling and muscle soreness." },
       { step: "04", name: "Weekly Accountability & Progression", desc: "Continuous monitoring and menu rotations to guarantee long-term success." }
     ],
-    seoKeywords: "Clinical Nutritionist Jaipur, Dietician C Scheme Jaipur, Holistic Nutrition Clinic Opposite SMS Hospital"
+    seoKeywords: "Nutritionist Jaipur, Dietician C Scheme Jaipur, Holistic Nutrition Clinic Opposite SMS Hospital"
   },
   {
     id: "clinical-nutrition",
     title: "Weight Loss & Healthy Weight Gain",
     category: "Nutrition Department",
     shortDesc: "Scientific body composition management focusing on sustainable fat loss or lean muscle mass gain without crash dieting.",
-    fullDescription: "Forget starvation diets. Our Jaipur clinical nutritionists build customized caloric and macronutrient plans that optimize metabolic rate while preserving muscle tissue.",
+    fullDescription: "Forget starvation diets. Our Jaipur nutritionists build customized caloric and macronutrient plans that optimize metabolic rate while preserving muscle tissue.",
     symptoms: [
       "Stubborn belly fat or visceral fat accumulation",
       "Difficulty gaining healthy muscle weight after illness",
@@ -418,10 +418,10 @@ export const CORE_SERVICES = [
 export const TESTIMONIALS = [
   {
     id: 1,
-    name: "Dr. Alok Verma",
+    name: "Dr. Suresh",
     location: "C Scheme, Jaipur",
-    condition: "Severe L4-L5 Disc Herniation & Sciatica",
-    quote: "Being a practicing surgeon opposite SMS Hospital, I was skeptical about avoiding surgery for my sciatica. Healthstrings Clinic relieved my radiating pain in 3 weeks through ethical manual physiotherapy and guided functional core strengthening.",
+    condition: "Severe L4-L5 Disc Herniation & lateral epicondylitis",
+    quote: "Being a practicing surgeon opposite SMS Hospital, I was skeptical about avoiding surgery for my lateral epicondylitis. Healthstrings Clinic relieved my radiating pain in 3 weeks through ethical manual physiotherapy and guided functional core strengthening.",
     rating: 5,
     tag: "Verified Medical Patient"
   },
@@ -455,7 +455,7 @@ export const FAQS = [
     a: "No prior referral is necessary. You can book an independent evaluation directly with our principal physiotherapist. If you have MRI scans, X-rays, or orthopedic referral slips from SMS Hospital or other clinics, please bring them along."
   },
   {
-    q: "Do you offer both Physiotherapy and Clinical Nutrition under one roof?",
+    q: "Do you offer both Physiotherapy and Nutrition under one roof?",
     a: "Yes! HealthStrings Clinic provides integrated dual-pillar care combining non-surgical orthopedic physical therapy with customized metabolic and hormonal diet charts by Dr. Meenakshi Kanwar Sisodia."
   },
   {
@@ -504,7 +504,7 @@ export const EXACT_PILLARS = [
       "Immunity-Boosting Diet Plans",
       "Personalized Diet Charts",
       "Diabetes & Heart Health Nutrition",
-      "Clinical Nutrition Counseling",
+      "Nutrition Counseling",
       "Pregnancy & Postnatal Nutrition",
       "Child & Adolescent Nutrition"
     ]
@@ -557,7 +557,7 @@ export const EXACT_CONDITIONS_LIST = [
 export const EXACT_WHY_CHOOSE_US = [
   { title: "Personalized Treatment Plans", desc: "Every therapy and diet chart is customized to your exact diagnosis." },
   { title: "Evidence-Based Physiotherapy", desc: "International Indian Association of Physiotherapists clinical standards." },
-  { title: "Clinical Nutrition Expertise", desc: "Led by specialist Dr. Meenakshi Kanwar Sisodia." },
+  { title: "Nutrition Expertise", desc: "Led by specialist Dr. Meenakshi Kanwar Sisodia." },
   { title: "Root Cause Focused Treatment", desc: "Solving underlying structural and metabolic triggers." },
   { title: "One-to-One Patient Care", desc: "Dedicated doctor supervision without crowded clinic rushing." },
   { title: "Advanced Rehabilitation Programs", desc: "Spinal decompression, orthopedic & sports protocols." },

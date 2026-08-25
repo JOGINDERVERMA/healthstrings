@@ -24,7 +24,7 @@ export default function AboutPage({ setActivePage }) {
       ]
     },
     {
-      title: 'Clinical Nutrition',
+      title: 'Nutrition',
       icon: <Apple size={24} color="#059669" />,
       color: '#059669',
       bg: '#ecfdf5',
@@ -82,7 +82,7 @@ export default function AboutPage({ setActivePage }) {
     'Personalized Patient Care',
     'Experienced Healthcare Professionals',
     'Advanced Physiotherapy Techniques',
-    'Clinical Nutrition Expertise',
+    'Nutrition Expertise',
     'Root Cause Focused Treatment',
     'Non-Surgical Pain Management',
     'Modern Rehabilitation Programs',
@@ -163,7 +163,7 @@ export default function AboutPage({ setActivePage }) {
               </p>
 
               <p style={{ fontSize: '1.03rem', lineHeight: 1.76, color: '#cbd5e1', marginBottom: '32px' }}>
-                Located in C-Scheme, Jaipur, HealthStrings Clinic offers a comprehensive range of services, including Physiotherapy, Clinical Nutrition, Rehabilitation, Strength &amp; Conditioning, and Lifestyle Management. Whether you are recovering from an injury, managing chronic pain, balancing hormonal health, or working towards better overall wellness, our experienced team creates customized treatment plans designed specifically for your needs.
+                Located in C-Scheme, Jaipur, HealthStrings Clinic offers a comprehensive range of services, including Physiotherapy, Nutrition, Rehabilitation, Strength &amp; Conditioning, and Lifestyle Management. Whether you are recovering from an injury, managing chronic pain, balancing hormonal health, or working towards better overall wellness, our experienced team creates customized treatment plans designed specifically for your needs.
               </p>
 
               <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
@@ -344,7 +344,7 @@ export default function AboutPage({ setActivePage }) {
               Integrated Healthcare &amp; Clinical Rehabilitation
             </h2>
             <p className="section-subtitle">
-              HealthStrings Clinic provides integrated healthcare services that combine modern physiotherapy techniques with clinical nutrition and rehabilitation programs.
+              HealthStrings Clinic provides integrated healthcare services that combine modern physiotherapy techniques with nutrition and rehabilitation programs.
             </p>
           </div>
 
@@ -505,7 +505,7 @@ export default function AboutPage({ setActivePage }) {
               Dr. Meenakshi Kanwar Sisodia
             </h2>
             <div style={{ fontSize: '1.12rem', color: '#2dd4bf', fontWeight: 700 }}>
-              Clinical Nutritionist | Physiotherapy &amp; Recovery Expert
+              Nutritionist | Physiotherapy &amp; Recovery Expert
             </div>
           </div>
 
@@ -535,7 +535,7 @@ export default function AboutPage({ setActivePage }) {
             {/* Founder Narrative */}
             <div>
               <p style={{ fontSize: '1.08rem', color: '#f1f5f9', lineHeight: 1.84, marginBottom: '24px' }}>
-                Dr. Meenakshi Kanwar Sisodia is the founder of HealthStrings Clinic and is passionate about helping people improve their health through personalized physiotherapy, clinical nutrition, and rehabilitation. Her patient-centered approach focuses on identifying the root cause of pain and lifestyle disorders while promoting sustainable recovery through movement, nutrition, and education.
+                Dr. Meenakshi Kanwar Sisodia is the founder of HealthStrings Clinic and is passionate about helping people improve their health through personalized physiotherapy, nutrition, and rehabilitation. Her patient-centered approach focuses on identifying the root cause of pain and lifestyle disorders while promoting sustainable recovery through movement, nutrition, and education.
               </p>
 
               <p style={{ fontSize: '1.06rem', color: '#cbd5e1', lineHeight: 1.82, marginBottom: '32px' }}>

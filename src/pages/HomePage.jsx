@@ -22,7 +22,7 @@ const HERO_SLIDES = [
   {
     id: 1,
     image: '/hero_slide_1.jpg',
-    tag: 'PHYSIOTHERAPY & CLINICAL NUTRITION • JAIPUR',
+    tag: 'PHYSIOTHERAPY & NUTRITION • JAIPUR',
     titleMain: 'Expert Physiotherapy & Sports Rehabilitation ',
     titleAccent: 'in Jaipur'
   },
@@ -431,9 +431,8 @@ export default function HomePage({ setActivePage, setSelectedServiceId }) {
                     </span>
                   </div>
                   <div className="hero-doctor-credentials d-inline">
-                   <p> Sports Physiotherapist | Nutritionist</p>
-                   <p> BPT, CKT • World Rugby Level 1 Medic</p>
-                   <p> Khelo India Team Physio, Athletics Pre Level 1 Coach, <br></br>Certified Technical Official (AFI)</p>
+                   <p> Chief consultant & Founder</p>
+                   <p> Sports physiotherapist | Nutritionist <br></br>BPT, CKT , CDNT, CCT</p>
                   </div>
                 </div>
               </div>
@@ -461,7 +460,7 @@ export default function HomePage({ setActivePage, setSelectedServiceId }) {
               </span>
               <span className="hero-pillar-pill">
                 <Apple size={14} color="#34d399" />
-                <span>Clinical Nutrition &amp; Diet</span>
+                <span> Nutrition &amp; Diet</span>
               </span>
               <span className="hero-pillar-pill">
                 <Dumbbell size={14} color="#38bdf8" />
@@ -471,7 +470,7 @@ export default function HomePage({ setActivePage, setSelectedServiceId }) {
 
             {/* DESCRIPTION CENTERED */}
             <p className="hero-desc-main">
-              At HealthStrings Clinic, we believe that true healing begins by addressing the root cause of pain and health concerns. Our integrated approach combines advanced physiotherapy, clinical nutrition, rehabilitation, and strength &amp; conditioning to help you recover naturally, restore mobility, and achieve long-term wellness.
+              At HealthStrings Clinic, we believe that true healing begins by addressing the root cause of pain and health concerns. Our integrated approach combines advanced physiotherapy, nutrition, rehabilitation, and strength &amp; conditioning to help you recover naturally, restore mobility, and achieve long-term wellness.
             </p>
 
             <p className="hero-desc-sub">
@@ -502,9 +501,6 @@ export default function HomePage({ setActivePage, setSelectedServiceId }) {
 
             {/* INTERACTIVE SLIDE SELECTOR TABS & INDICATORS CENTERED AT BOTTOM */}
             <div className="hero-slide-tabs">
-              <span className="hero-slide-tabs-label">
-                Explore Clinical Slides:
-              </span>
               <button
                 type="button"
                 onClick={() => setCurrentSlide(0)}
@@ -517,7 +513,7 @@ export default function HomePage({ setActivePage, setSelectedServiceId }) {
                 onClick={() => setCurrentSlide(1)}
                 className={`hero-slide-tab-btn ${currentSlide === 1 ? 'active' : ''}`}
               >
-                02. CLINICAL NUTRITION
+                02. NUTRITION
               </button>
               <button
                 type="button"
@@ -749,7 +745,7 @@ export default function HomePage({ setActivePage, setSelectedServiceId }) {
               }}>
                 <img
                   src="/dr_meenakshi_profile.png"
-                  alt="Dr. Meenakshi Kanwar Sisodia - Specialist in Physiotherapy & Clinical Nutrition"
+                  alt="Dr. Meenakshi Kanwar Sisodia - Specialist in Physiotherapy & Nutrition"
                   style={{ width: '100%', height: '440px', objectFit: 'cover', objectPosition: 'top', display: 'block', backgroundColor: '#ffffff' }}
                 />
               </div>
@@ -767,13 +763,12 @@ export default function HomePage({ setActivePage, setSelectedServiceId }) {
               </h2>
               <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#2dd4bf', marginBottom: '22px' }}>
                 Sports Physiotherapist | Nutritionist
-                <span className='d-flex'> BPT, CKT • World Rugby Level 1 Medic </span>
-               <span className='d-flex'> Certified Technical Official (AFI)</span>
-                 <span className='d-flex'>Athletics Pre Level 1 Coach, Khelo India Team Physio, </span>
+                <span className='d-flex'> Chief consultant & Founder </span>
+               <span className='d-flex'> BPT, CKT , CDNT, CCT</span>
               </div>
 
               <p style={{ fontSize: '1.05rem', color: '#cbd5e1', lineHeight: 1.8, marginBottom: '26px' }}>
-                Dr. Meenakshi Kanwar Sisodia is dedicated to helping individuals achieve better health through personalized physiotherapy, clinical nutrition, rehabilitation, and lifestyle management. Her patient-focused approach emphasizes treating the root cause of health concerns while promoting sustainable recovery and long-term wellness.
+                Dr. Meenakshi Kanwar Sisodia is dedicated to helping individuals achieve better health through personalized physiotherapy, nutrition, rehabilitation, and lifestyle management. Her patient-focused approach emphasizes treating the root cause of health concerns while promoting sustainable recovery and long-term wellness.
               </p>
 
               <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>

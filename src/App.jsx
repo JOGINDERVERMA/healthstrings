@@ -14,13 +14,19 @@ import SportsInjuryPage from './pages/SportsInjuryPage';
 import PostSurgeryPage from './pages/PostSurgeryPage';
 import PostureCorrectionPage from './pages/PostureCorrectionPage';
 import ChronicPainPage from './pages/ChronicPainPage';
+import WeightLossPage from './pages/WeightLossPage';
+import PcosDietPage from './pages/PcosDietPage';
+import GutHealthPage from './pages/GutHealthPage';
+import SportsNutritionPage from './pages/SportsNutritionPage';
+import CardioDiabetesPage from './pages/CardioDiabetesPage';
+import ErgonomicsPage from './pages/ErgonomicsPage';
 import { MessageCircle, Phone, ArrowUp } from 'lucide-react';
 import { CLINIC_INFO } from './data/clinicData';
 
 export default function App() {
   const [activePage, setActivePageState] = useState(() => {
     const path = window.location.pathname.replace(/^\/+/, '') || window.location.hash.replace(/^[/#]+/, '') || 'home';
-    const validPages = ['home', 'about', 'services', 'service-detail', 'contact', 'back-and-neck-pain-treatment', 'knee-shoulder', 'disc-sciatica', 'sports-injury', 'post-surgery', 'posture-correction', 'chronic-pain'];
+    const validPages = ['home', 'about', 'services', 'service-detail', 'contact', 'back-and-neck-pain-treatment', 'knee-shoulder', 'disc-sciatica', 'sports-injury', 'post-surgery', 'posture-correction', 'chronic-pain', 'clinical-nutrition', 'pcos-diet', 'gut-health', 'sports-nutrition', 'cardio-diabetes', 'strength-conditioning'];
     return validPages.includes(path) ? path : 'home';
   });
   const [selectedServiceId, setSelectedServiceId] = useState('orthopedic');
@@ -45,7 +51,7 @@ export default function App() {
         setActivePageState(event.state.page);
       } else {
         const path = window.location.pathname.replace(/^\/+/, '') || window.location.hash.replace(/^[/#]+/, '') || 'home';
-        const validPages = ['home', 'about', 'services', 'service-detail', 'contact', 'back-and-neck-pain-treatment', 'knee-shoulder', 'disc-sciatica', 'sports-injury', 'post-surgery', 'posture-correction', 'chronic-pain'];
+        const validPages = ['home', 'about', 'services', 'service-detail', 'contact', 'back-and-neck-pain-treatment', 'knee-shoulder', 'disc-sciatica', 'sports-injury', 'post-surgery', 'posture-correction', 'chronic-pain', 'clinical-nutrition', 'pcos-diet', 'gut-health', 'sports-nutrition', 'cardio-diabetes', 'strength-conditioning'];
         setActivePageState(validPages.includes(path) ? path : 'home');
       }
     };
@@ -164,6 +170,30 @@ export default function App() {
 
         {activePage === 'chronic-pain' && (
           <ChronicPainPage setActivePage={setActivePage} />
+        )}
+
+        {activePage === 'clinical-nutrition' && (
+          <WeightLossPage setActivePage={setActivePage} onOpenStudioModal={() => setStudioModalOpen(true)} />
+        )}
+
+        {activePage === 'pcos-diet' && (
+          <PcosDietPage setActivePage={setActivePage} onOpenStudioModal={() => setStudioModalOpen(true)} />
+        )}
+
+        {activePage === 'gut-health' && (
+          <GutHealthPage setActivePage={setActivePage} onOpenStudioModal={() => setStudioModalOpen(true)} />
+        )}
+
+        {activePage === 'sports-nutrition' && (
+          <SportsNutritionPage setActivePage={setActivePage} onOpenStudioModal={() => setStudioModalOpen(true)} />
+        )}
+
+        {activePage === 'cardio-diabetes' && (
+          <CardioDiabetesPage setActivePage={setActivePage} onOpenStudioModal={() => setStudioModalOpen(true)} />
+        )}
+
+        {activePage === 'strength-conditioning' && (
+          <ErgonomicsPage setActivePage={setActivePage} onOpenStudioModal={() => setStudioModalOpen(true)} />
         )}
       </main>
 

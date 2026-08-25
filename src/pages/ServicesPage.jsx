@@ -18,7 +18,13 @@ export default function ServicesPage({ setSelectedServiceId, setActivePage, onOp
       'sports-injury': 'sports-injury',
       'post-surgery': 'post-surgery',
       'posture-correction': 'posture-correction',
-      'chronic-pain': 'chronic-pain'
+      'chronic-pain': 'chronic-pain',
+      'clinical-nutrition': 'clinical-nutrition',
+      'pcos-diet': 'pcos-diet',
+      'gut-health': 'gut-health',
+      'sports-nutrition': 'sports-nutrition',
+      'cardio-diabetes': 'cardio-diabetes',
+      'strength-conditioning': 'strength-conditioning'
     };
 
     if (dedicatedRoutes[id]) {
@@ -59,7 +65,7 @@ export default function ServicesPage({ setSelectedServiceId, setActivePage, onOp
             <Sparkles size={24} color="#2dd4bf" />
             <div>
               <div style={{ fontSize: '1.05rem', fontWeight: 800, color: 'white' }}>
-                RANKED #1 ETHICAL PHYSIOTHERAPY, CLINICAL NUTRITION & SPORTS REHAB IN JAIPUR
+                RANKED #1 ETHICAL PHYSIOTHERAPY, NUTRITION & SPORTS REHAB IN JAIPUR
               </div>
               <div style={{ fontSize: '0.84rem', color: '#94a3b8' }}>
                 Primary service zones: C Scheme, Raja Park, Bapu Nagar, Civil Lines & SMS Hospital Medical Corridor
@@ -201,7 +207,7 @@ export default function ServicesPage({ setSelectedServiceId, setActivePage, onOp
               Book Your Diagnostic Assessment at SMS Hospital C Scheme
             </h3>
             <p style={{ color: '#cbd5e1', maxWidth: '600px' }}>
-              Our senior physiotherapists and clinical nutritionists will perform a full 45-minute evaluation of your symptoms, posture, or metabolic health.
+              Our senior physiotherapists and nutritionists will perform a full 45-minute evaluation of your symptoms, posture, or metabolic health.
             </p>
           </div>
 

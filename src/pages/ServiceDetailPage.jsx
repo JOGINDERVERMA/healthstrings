@@ -13,15 +13,15 @@ import FAQSection from '../components/FAQSection';
 import CTASection from '../components/CTASection';
 import ContactSection from '../components/ContactSection';
 
-export default function ServiceDetailPage({ serviceId, setActivePage, onOpenStudioModal }) {
+export default function ServiceDetailPage({ selectedServiceId, setActivePage, onOpenStudioModal }) {
   const [activeFaq, setActiveFaq] = useState(null);
 
-  // Scroll to top whenever serviceId changes
+  // Scroll to top whenever selectedServiceId changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [serviceId]);
+  }, [selectedServiceId]);
 
-  const service = CORE_SERVICES.find((s) => s.id === serviceId) || CORE_SERVICES[0];
+  const service = CORE_SERVICES.find((s) => s.id === selectedServiceId) || CORE_SERVICES[0];
 
   // Select appropriate hero image from local folder based on category
   const getServiceBannerImage = () => {
@@ -49,7 +49,7 @@ export default function ServiceDetailPage({ serviceId, setActivePage, onOpenStud
     'Personalized Treatment Plans Tailored to Your Diagnosis',
     'Experienced Healthcare & Physiotherapy Professionals',
     'Advanced Non-Surgical Physiotherapy & Decompression Techniques',
-    'Evidence-Based Clinical Nutrition Guidance',
+    'Evidence-Based Nutrition Guidance',
     'Root-Cause Focused Diagnostic Treatment Philosophy',
     'Modern Rehabilitation Programs & Equipment',
     'Dedicated 1-on-1 Individual Patient Attention',
@@ -147,7 +147,7 @@ export default function ServiceDetailPage({ serviceId, setActivePage, onOpenStud
               lineHeight: 1.76,
               marginBottom: '34px'
             }}>
-              HealthStrings Clinic is a trusted Physiotherapy and Nutrition Clinic in Jaipur, providing personalized treatment for pain relief, rehabilitation, lifestyle disorders, and long-term wellness. Our evidence-based approach combines physiotherapy, clinical nutrition, and preventive healthcare to help you recover naturally and live a healthier life.
+              HealthStrings Clinic is a trusted Physiotherapy and Nutrition Clinic in Jaipur, providing personalized treatment for pain relief, rehabilitation, lifestyle disorders, and long-term wellness. Our evidence-based approach combines physiotherapy, nutrition, and preventive healthcare to help you recover naturally and live a healthier life.
             </p>
 
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
@@ -179,7 +179,7 @@ export default function ServiceDetailPage({ serviceId, setActivePage, onOpenStud
               Your Trusted Physiotherapy & Nutrition Clinic in Jaipur
             </h2>
             <p style={{ fontSize: '1.06rem', color: '#334155', lineHeight: 1.8, marginBottom: '18px' }}>
-              <strong>HealthStrings Clinic</strong> is committed to delivering personalized healthcare through physiotherapy, clinical nutrition, rehabilitation, and lifestyle management. We believe in treating the root cause of health concerns rather than simply managing symptoms.
+              <strong>HealthStrings Clinic</strong> is committed to delivering personalized healthcare through physiotherapy, nutrition, rehabilitation, and lifestyle management. We believe in treating the root cause of health concerns rather than simply managing symptoms.
             </p>
             <p style={{ fontSize: '1.06rem', color: '#334155', lineHeight: 1.8, marginBottom: '28px' }}>
               Whether you are recovering from an injury, managing chronic pain, dealing with hormonal imbalance, or looking to improve your overall health, our expert team creates customized treatment plans tailored to your individual diagnosis across Jaipur, C-Scheme, Raja Park, and Bapu Nagar.
@@ -288,7 +288,7 @@ export default function ServiceDetailPage({ serviceId, setActivePage, onOpenStud
             {/* Pillar B: Nutrition & Lifestyle Management */}
             <div style={{ backgroundColor: '#ffffff', borderRadius: '26px', padding: '38px', border: '1px solid #cbd5e1', boxShadow: '0 12px 30px rgba(15,23,42,0.06)' }}>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: '#fef3c7', color: '#d97706', padding: '6px 14px', borderRadius: '999px', fontSize: '0.8rem', fontWeight: 800, marginBottom: '16px' }}>
-                PILLAR 02 • CLINICAL NUTRITION
+                PILLAR 02 • NUTRITION
               </div>
               <h3 style={{ fontSize: '1.8rem', color: '#0f172a', marginBottom: '12px' }}>
                 Personalized Nutrition & Lifestyle Care
@@ -334,7 +334,7 @@ export default function ServiceDetailPage({ serviceId, setActivePage, onOpenStud
               Comprehensive Care for Pain & Lifestyle Disorders
             </h2>
             <p className="section-subtitle">
-              We provide personalized treatment for a wide range of health conditions through physiotherapy and clinical nutrition across Jaipur.
+              We provide personalized treatment for a wide range of health conditions through physiotherapy and nutrition across Jaipur.
             </p>
           </div>
 
@@ -373,7 +373,7 @@ export default function ServiceDetailPage({ serviceId, setActivePage, onOpenStud
               Personalized Care. Evidence-Based Treatment. Lasting Results.
             </h2>
             <p style={{ color: '#cbd5e1', fontSize: '1.08rem' }}>
-              HealthStrings Clinic combines modern physiotherapy with clinical nutrition to provide comprehensive healthcare under one roof.
+              HealthStrings Clinic combines modern physiotherapy with nutrition to provide comprehensive healthcare under one roof.
             </p>
           </div>
 
@@ -408,7 +408,7 @@ export default function ServiceDetailPage({ serviceId, setActivePage, onOpenStud
             <div>
               <img
                 src="/dr_meenakshi_profile.png"
-                alt="Dr. Meenakshi Kanwar Sisodia Clinical Nutritionist & Physiotherapy Expert Jaipur"
+                alt="Dr. Meenakshi Kanwar Sisodia - Nutritionist & Physiotherapy Expert Jaipur"
                 style={{ width: '100%', height: '420px', objectFit: 'cover', objectPosition: 'top', borderRadius: '28px', boxShadow: '0 20px 45px rgba(15,23,42,0.15)', border: '1px solid #cbd5e1', backgroundColor: '#ffffff' }}
               />
             </div>
@@ -419,7 +419,7 @@ export default function ServiceDetailPage({ serviceId, setActivePage, onOpenStud
                 Dr. Meenakshi Kanwar Sisodia
               </h2>
               <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0f766e', marginBottom: '22px' }}>
-                Clinical Nutritionist | Physiotherapy & Recovery Expert
+                Nutritionist | Physiotherapy & Recovery Expert
               </div>
               <p style={{ fontSize: '1.05rem', color: '#475569', lineHeight: 1.78, marginBottom: '20px' }}>
                 Dr. Meenakshi Kanwar Sisodia is dedicated to helping patients achieve better health through personalized nutrition, physiotherapy, rehabilitation, and preventive care. Her treatment philosophy focuses on identifying and treating the root cause of health concerns while promoting sustainable lifestyle changes.
@@ -542,7 +542,7 @@ export default function ServiceDetailPage({ serviceId, setActivePage, onOpenStud
               <img src="/clinic-gallery-1.svg" alt="Healthstrings Clinic Physiotherapy Suite Jaipur" style={{ width: '100%', display: 'block' }} />
             </div>
             <div style={{ borderRadius: '24px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.2)' }}>
-              <img src="/clinic-gallery-2.svg" alt="Healthstrings Clinic Clinical Nutrition Diagnostic Suite" style={{ width: '100%', display: 'block' }} />
+              <img src="/clinic-gallery-2.svg" alt="Healthstrings Clinic, Nutrition Diagnostic Suite" style={{ width: '100%', display: 'block' }} />
             </div>
           </div>
         </div>

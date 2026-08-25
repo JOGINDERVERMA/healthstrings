@@ -7,6 +7,7 @@ import { CLINIC_INFO, CORE_SERVICES } from '../data/clinicData';
 
 export default function Header({ activePage, setActivePage, setSelectedServiceId, onOpenStudioModal }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeMobilePanel, setActiveMobilePanel] = useState('main');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const dropdownTimeoutRef = useRef(null);
@@ -35,6 +36,7 @@ export default function Header({ activePage, setActivePage, setSelectedServiceId
       if (event.key === 'Escape') {
         setServicesDropdownOpen(false);
         setMobileMenuOpen(false);
+        setActiveMobilePanel('main');
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -61,6 +63,7 @@ export default function Header({ activePage, setActivePage, setSelectedServiceId
   const navigateTo = (page) => {
     setActivePage(page);
     setMobileMenuOpen(false);
+    setActiveMobilePanel('main');
     setServicesDropdownOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -77,7 +80,13 @@ export default function Header({ activePage, setActivePage, setSelectedServiceId
       'sports-injury': 'sports-injury',
       'post-surgery': 'post-surgery',
       'posture-correction': 'posture-correction',
-      'chronic-pain': 'chronic-pain'
+      'chronic-pain': 'chronic-pain',
+      'clinical-nutrition': 'clinical-nutrition',
+      'pcos-diet': 'pcos-diet',
+      'gut-health': 'gut-health',
+      'sports-nutrition': 'sports-nutrition',
+      'cardio-diabetes': 'cardio-diabetes',
+      'strength-conditioning': 'strength-conditioning'
     };
 
     if (dedicatedRoutes[serviceId]) {
@@ -88,6 +97,7 @@ export default function Header({ activePage, setActivePage, setSelectedServiceId
     
     setServicesDropdownOpen(false);
     setMobileMenuOpen(false);
+    setActiveMobilePanel('main');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -254,88 +264,112 @@ export default function Header({ activePage, setActivePage, setSelectedServiceId
         </div>
       </div>
 
-      {/* 3. Responsive Mobile Drawer (High-Contrast, Clean & Accessible) */}
-      <div className={`mobile-drawer-overlay ${mobileMenuOpen ? 'open' : ''}`} onClick={() => setMobileMenuOpen(false)}>
+      {/* 3. Responsive Mobile Drawer (High-Contrast, Clean & Accessible, mmenu style) */}
+      <div className={`mobile-drawer-overlay ${mobileMenuOpen ? 'open' : ''}`} onClick={() => { setMobileMenuOpen(false); setActiveMobilePanel('main'); }}>
         <div className={`mobile-drawer-content ${mobileMenuOpen ? 'open' : ''}`} onClick={(e) => e.stopPropagation()}>
           <div className="mobile-drawer-header">
-            <div className="logo-group" onClick={() => { navigateTo('home'); setMobileMenuOpen(false); }}>
+            <div className="logo-group" onClick={() => navigateTo('home')}>
               <img src="/logo.png" alt="Healthstrings Official Logo" className="official-brand-logo" style={{ height: '44px' }} />
             </div>
-            <button onClick={() => setMobileMenuOpen(false)} className="mobile-close-btn" aria-label="Close Menu">
+            <button onClick={() => { setMobileMenuOpen(false); setActiveMobilePanel('main'); }} className="mobile-close-btn" aria-label="Close Menu">
               <X size={26} color="#0f172a" />
             </button>
           </div>
 
-          <div className="mobile-drawer-scroll-area">
-            <div className="mobile-drawer-links">
-              <button 
-                className={`mobile-nav-link ${activePage === 'home' ? 'active' : ''}`}
-                onClick={() => { navigateTo('home'); setMobileMenuOpen(false); }}
-              >
-                Home Page
-              </button>
-              <button 
-                className={`mobile-nav-link ${activePage === 'about' ? 'active' : ''}`}
-                onClick={() => { navigateTo('about'); setMobileMenuOpen(false); }}
-              >
-                About Jaipur Clinic
-              </button>
+          <div className="mobile-panels-wrapper">
+            <div className={`mobile-panels-container ${activeMobilePanel === 'services' ? 'slide-left' : ''}`}>
               
-              <div className="mobile-nav-group">
-                <button 
-                  className={`mobile-nav-link ${activePage === 'services' ? 'active' : ''}`}
-                  onClick={() => { navigateTo('services'); setMobileMenuOpen(false); }}
-                  style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
-                >
-                  <span>Treatments & Services</span>
-                  <ChevronDown size={18} />
-                </button>
-                <div className="mobile-sub-menu">
-                  {CORE_SERVICES.map((s) => (
-                    <button
-                      key={s.id}
-                      onClick={() => { handleSelectServiceDetail(s.id); setMobileMenuOpen(false); }}
-                      className="mobile-sub-link"
+              {/* --- MAIN PANEL --- */}
+              <div className="mobile-panel main-panel">
+                <div className="mobile-drawer-scroll-area">
+                  <div className="mobile-drawer-links">
+                    <button 
+                      className={`mobile-nav-link ${activePage === 'home' ? 'active' : ''}`}
+                      onClick={() => navigateTo('home')}
                     >
-                      <Activity size={14} color="#0d9488" style={{ flexShrink: 0 }} />
-                      <span>{s.title}</span>
+                      Home Page
                     </button>
-                  ))}
+                    <button 
+                      className={`mobile-nav-link ${activePage === 'about' ? 'active' : ''}`}
+                      onClick={() => navigateTo('about')}
+                    >
+                      About Jaipur Clinic
+                    </button>
+                    
+                    <button 
+                      className="mobile-nav-link mmenu-next-btn"
+                      onClick={() => setActiveMobilePanel('services')}
+                    >
+                      <span>Treatments & Services</span>
+                      <ArrowRight size={18} />
+                    </button>
+
+                    <button 
+                      className={`mobile-nav-link ${activePage === 'contact' ? 'active' : ''}`}
+                      onClick={() => navigateTo('contact')}
+                    >
+                      Contact & Book Appointment
+                    </button>
+                  </div>
+                </div>
+
+                <div className="mobile-drawer-bottom">
+                  <div className="mobile-drawer-actions">
+                    <a
+                      href={`tel:${CLINIC_INFO.phone}`}
+                      className="btn-book-primary"
+                      style={{ width: '100%', justifyContent: 'center', textDecoration: 'none', padding: '14px', borderRadius: '12px' }}
+                    >
+                      <Phone size={18} />
+                      <span>Call Clinic: {CLINIC_INFO.phone}</span>
+                    </a>
+                  </div>
+
+                  <div className="mobile-drawer-footer">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#0d9488', fontWeight: 700, fontSize: '0.84rem' }}>
+                      <ShieldCheck size={16} /> 100% VERIFIED MEDICAL STANDARD
+                    </div>
+                    <div style={{ fontSize: '0.8rem', color: '#64748b', margin: '4px 0 0 22px' }}>
+                      Opposite SMS Hospital, C Scheme, Jaipur
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <button 
-                className={`mobile-nav-link ${activePage === 'contact' ? 'active' : ''}`}
-                onClick={() => { navigateTo('contact'); setMobileMenuOpen(false); }}
-              >
-                Contact & Book Appointment
-              </button>
-            </div>
-          </div>
-
-          <div className="mobile-drawer-bottom">
-            <div className="mobile-drawer-actions">
-              <a
-                href={`tel:${CLINIC_INFO.phone}`}
-                className="btn-book-primary"
-                style={{ width: '100%', justifyContent: 'center', textDecoration: 'none', padding: '14px', borderRadius: '12px' }}
-              >
-                <Phone size={18} />
-                <span>Call Clinic: {CLINIC_INFO.phone}</span>
-              </a>
-            </div>
-
-            <div className="mobile-drawer-footer">
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#0d9488', fontWeight: 700, fontSize: '0.84rem' }}>
-                <ShieldCheck size={16} /> 100% VERIFIED MEDICAL STANDARD
+              {/* --- SERVICES SUB-PANEL --- */}
+              <div className="mobile-panel services-panel">
+                <div className="mobile-panel-header">
+                  <button className="mmenu-back-btn" onClick={() => setActiveMobilePanel('main')}>
+                    <ChevronDown size={22} style={{ transform: 'rotate(90deg)' }} />
+                    <span>Back to Main Menu</span>
+                  </button>
+                </div>
+                
+                <div className="mobile-drawer-scroll-area">
+                  <div className="mobile-drawer-links" style={{ padding: '0 24px 24px' }}>
+                    <div style={{ fontSize: '0.8rem', fontWeight: 800, color: '#64748b', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>
+                      All Treatments
+                    </div>
+                    {CORE_SERVICES.map((s) => (
+                      <button
+                        key={s.id}
+                        onClick={() => handleSelectServiceDetail(s.id)}
+                        className="mobile-sub-link mmenu-sub-link"
+                      >
+                        <Activity size={16} color="#0d9488" style={{ flexShrink: 0 }} />
+                        <span>{s.title}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <div style={{ fontSize: '0.8rem', color: '#64748b', marginTop: '4px' }}>
-                Opposite SMS Hospital, C Scheme, Jaipur
-              </div>
+
             </div>
           </div>
         </div>
       </div>
+
+
     </header>
   );
 }

@@ -27,7 +27,7 @@ export default function ChronicPainPage({ setActivePage }) {
               Chronic Pain <span style={{ color: '#2dd4bf' }}>Management</span>
             </h1>
             <p style={{ fontSize: 'clamp(1.1rem, 2vw, 1.25rem)', color: '#cbd5e1', lineHeight: 1.7, marginBottom: '40px', maxWidth: '680px' }}>
-              Stop relying on daily painkillers. We combine advanced electrotherapy, therapeutic movement, and clinical nutrition to down-regulate your nervous system and treat the systemic causes of chronic pain.
+              Stop relying on daily painkillers. We combine advanced electrotherapy, therapeutic movement, and nutrition to down-regulate your nervous system and treat the systemic causes of chronic pain.
             </p>
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
               <button onClick={() => setActivePage('contact')} style={{ backgroundColor: '#2dd4bf', color: '#0f172a', padding: '16px 32px', borderRadius: '999px', fontWeight: 800, fontSize: '1rem', border: 'none', display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', boxShadow: '0 8px 25px rgba(45, 212, 191, 0.3)' }}>
@@ -71,7 +71,7 @@ export default function ChronicPainPage({ setActivePage }) {
                 {[
                   { title: "Step 1: Nervous System Desensitization", desc: "Using advanced modalities like IFT, Ultrasound, and Cryotherapy to interrupt chronic pain signals to the brain." },
                   { title: "Step 2: Paced Therapeutic Movement", desc: "Introducing extremely gentle, pain-free range of motion exercises to restore joint lubrication without triggering flare-ups." },
-                  { title: "Step 3: Clinical Nutrition Synergy", desc: "Integrating anti-inflammatory diet protocols prescribed by Dr. Meenakshi to reduce systemic bodily inflammation." },
+                  { title: "Step 3: Nutrition Synergy", desc: "Integrating anti-inflammatory diet protocols prescribed by Dr. Meenakshi to reduce systemic bodily inflammation." },
                   { title: "Step 4: Long-Term Independence", desc: "Teaching you self-management strategies, breathing techniques, and home-care routines to maintain control over your pain." }
                 ].map((step, idx) => (
                   <div key={idx} style={{ display: 'flex', gap: '16px' }}>
@@ -87,7 +87,7 @@ export default function ChronicPainPage({ setActivePage }) {
             <div style={{ position: 'relative' }}>
               <div style={{ backgroundColor: '#0f172a', borderRadius: '30px', padding: '40px', position: 'relative', zIndex: 1, color: '#ffffff' }}>
                 <h3 style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '20px' }}>The Dual-Pillar Advantage</h3>
-                <p style={{ color: '#cbd5e1', lineHeight: 1.7, marginBottom: '20px' }}>Because Healthstrings Clinic offers both expert Physiotherapy AND Clinical Nutrition under one roof, we are uniquely equipped to treat chronic inflammatory conditions from both the outside in, and the inside out.</p>
+                <p style={{ color: '#cbd5e1', lineHeight: 1.7, marginBottom: '20px' }}>Because Healthstrings Clinic offers both expert Physiotherapy and Nutrition under one roof, we are uniquely equipped to treat chronic inflammatory conditions from both the outside in, and the inside out.</p>
                 <button onClick={() => setActivePage('contact')} style={{ width: '100%', padding: '16px', borderRadius: '12px', backgroundColor: '#2dd4bf', color: '#0f172a', fontWeight: 800, border: 'none', cursor: 'pointer' }}>Discover Holistic Care</button>
               </div>
             </div>

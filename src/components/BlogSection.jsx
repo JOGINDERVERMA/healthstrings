@@ -25,7 +25,7 @@ export default function BlogSection() {
             },
             {
               title: "The Hormonal Root Cause of PCOS: Why Restrictive Diets Fail",
-              category: "CLINICAL NUTRITION",
+              category: "NUTRITION",
               date: "July 2026",
               desc: "Learn why metabolic insulin sensitivity and anti-inflammatory food combinations are essential for hormone balance."
             },
