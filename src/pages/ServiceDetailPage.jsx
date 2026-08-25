@@ -223,10 +223,10 @@ export default function ServiceDetailPage({ selectedServiceId, setActivePage, on
                     Evidence-Based Protocol Deliverables
                   </h4>
                   <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                    {service.treatments.map((tr, i) => (
+                    {(service.procedure || []).map((tr, i) => (
                       <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '0.94rem', color: '#334155', fontWeight: 600 }}>
                         <CheckCircle2 size={16} color="#0d9488" style={{ flexShrink: 0, marginTop: '3px' }} />
-                        <span>{tr}</span>
+                        <span>{tr.name}</span>
                       </li>
                     ))}
                   </ul>
