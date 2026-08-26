@@ -5,7 +5,7 @@ const GALLERY_ITEMS = [
   {
     id: 'rugby-educator',
     image: '/gallery/gallery_rugby.jpg',
-    title: 'World Rugby Official Educator & Sports Rehab Specialist',
+    title: 'World Rugby L1 Medic',
     subtitle: 'Dr. Meenakshi Kamwar Sisodia conducting clinical sports injury assessment & on-field rehabilitation protocols.',
     category: 'Sports Rehab & Conditioning',
     badgeColor: '#0f766e',
