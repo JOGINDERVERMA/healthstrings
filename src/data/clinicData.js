@@ -479,6 +479,7 @@ export const EXACT_PILLARS = [
       "Disc Herniation & Sciatica Care",
       "Sports Injury Rehabilitation",
       "Post-Surgery Rehabilitation",
+      "Aqua therapy",
       "Posture Correction & Mobility Training",
       "Chronic Pain Management",
       "Arthritis & Joint Pain Care",
